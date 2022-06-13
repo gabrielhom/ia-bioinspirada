@@ -4,9 +4,9 @@ x = [[0, 0], [0, 1], [1, 0], [1, 1]]
 
 y = [-1, -1, -1, 1]  # saida and
 
-epoch = 100
-eta = 0.5
-bias = 0
+epoch = 100 # maximo épocas
+eta = 0.5 # taxa de aprendizagem
+bias = 0 # vies de treinamento
 
 for _ in range(epoch):
     erros = 0
