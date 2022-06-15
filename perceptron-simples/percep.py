@@ -15,12 +15,12 @@ for _ in range(epoch):
         for j in range(len(x[i])):
             soma += x[i][j] * pesos[j]
         soma += bias
-        saida = 1 if soma >= 0 else -1
+        saida = 1 if soma > 0 else -1
         erro = y[i] - saida
         if saida != y[i]:
             erros += 1
             for j in range(len(pesos)):
-                pesos[j] += eta * x[i][j]
+                pesos[j] += eta * x[i][j] * erro
             bias += erro
     if erros == 0:
         print(f"iterações treino: {_}")
