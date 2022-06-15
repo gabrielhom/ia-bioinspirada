@@ -63,11 +63,12 @@ def plot_decision_regions(X, y, classifier, resolution=0.02):
                     alpha=0.8, c=cmap(idx),
                     marker=markers[idx], label=cl)
 
-    plt.show()
+    plt.savefig("regioes-decisao.png")
 
 plot_decision_regions(X, y, classifier=ppn)
+plt.clf()
 
 plt.plot(range(1, len(ppn.errors_) + 1), ppn.errors_, marker='o')
 plt.xlabel('Epochs')
 plt.ylabel('Number of missclassifications')
-plt.show()
+plt.savefig("taxa-erro.png")
